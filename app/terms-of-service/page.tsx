@@ -1,243 +1,215 @@
 "use client";
 
-import { useEffect } from "react";
+import Navbar from "@/components/Navbar";
+import Link from "next/link";
 
-export default function TermsPage() {
-
-  useEffect(() => {
-    const links = document.querySelectorAll('a[href^="#"]');
-    links.forEach((link) => {
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute("href")!.substring(1);
-        const element = document.getElementById(targetId);
-        if (element) {
-          const offset = 90;
-          const position =
-            element.getBoundingClientRect().top + window.pageYOffset - offset;
-          window.scrollTo({ top: position, behavior: "smooth" });
-        }
-      });
-    });
-  }, []);
-
+export default function TermsOfService() {
   return (
-    <main className="bg-background text-foreground min-h-screen pt-32 pb-24 px-6 select-none">
+    <main className="min-h-screen bg-background">
+    <Navbar/>
+      <div className="max-w-5xl mx-auto px-6 py-24">
 
-      {/* HERO */}
-      <section className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-primary">
-          Terms & Conditions
-        </h1>
-        <p className="mt-4 text-muted-foreground">
-          My Tower – Smart Tower Management for Modern Living
-        </p>
-        <p className="text-sm text-muted-foreground mt-2">
-          <strong>Last Updated:</strong> {new Date().toLocaleDateString()}
-        </p>
-        <div className="w-24 h-1 bg-primary mx-auto mt-6 rounded-full" />
-      </section>
-
-      {/* CONTENT */}
-      <section className="max-w-5xl mx-auto space-y-14 text-muted-foreground leading-relaxed">
-
-        {/* Intro */}
-        <div>
-          <p>
-            Welcome to <strong>My Tower</strong>. These Terms & Conditions (“Terms”)
-            govern your access to and use of the My Tower SaaS platform,
-            mobile applications, and related services (“Services”).
-            By accessing or using our Services, you agree to be bound by these Terms.
+        {/* Header */}
+        <header className="text-center mb-20">
+          <h1 className="text-5xl md:text-6xl font-semibold tracking-tight text-[#694CD0]">
+            Terms & Conditions
+          </h1>
+          <p className="mt-6 text-lg text-muted-foreground max-w-3xl mx-auto">
+            These Terms & Conditions govern access to and use of the MyTower
+            platform and related services. By using MyTower, you agree to be
+            legally bound by these terms.
           </p>
-        </div>
-
-        {/* 1 */}
-        <div id="definitions">
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            1. Definitions
-          </h2>
-          <ul className="list-disc pl-6 space-y-2">
-            <li><strong>Platform:</strong> My Tower web and mobile applications.</li>
-            <li><strong>User:</strong> Residents, tenants, committee members, security staff, or authorized users.</li>
-            <li><strong>Society:</strong> Residential association or property management subscribing to services.</li>
-            <li><strong>Services:</strong> All modules and functionalities provided by My Tower.</li>
-          </ul>
-        </div>
-
-        {/* 2 */}
-        <div>
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            2. Eligibility
-          </h2>
-          <p>
-            You must be authorized by your residential society to use this platform.
-            By using My Tower, you confirm that you are at least 18 years old
-            or using the platform under supervision of an authorized guardian.
+          <p className="mt-4 text-sm text-muted-foreground">
+            Effective Date: {new Date().toLocaleDateString()}
           </p>
+        </header>
+
+        <div className="space-y-20 leading-relaxed text-foreground">
+
+          {/* 1. Acceptance */}
+          <section>
+            <h2 className="text-3xl font-semibold mb-6">
+              1. Acceptance of Terms
+            </h2>
+            <p className="text-muted-foreground">
+              By accessing or using MyTower (“Platform”), you confirm that you
+              have read, understood, and agreed to these Terms & Conditions.
+              If you do not agree, you must discontinue use immediately.
+            </p>
+          </section>
+
+          {/* 2. Services */}
+          <section>
+            <h2 className="text-3xl font-semibold mb-6">
+              2. Description of Services
+            </h2>
+            <p className="text-muted-foreground">
+              MyTower provides a digital society management platform including
+              maintenance billing, visitor management, complaint tracking,
+              announcements, financial transparency tools, and related features.
+            </p>
+          </section>
+
+          {/* 3. User Responsibilities */}
+          <section>
+            <h2 className="text-3xl font-semibold mb-6">
+              3. User Responsibilities
+            </h2>
+            <ul className="space-y-3 text-muted-foreground">
+              <li>• Provide accurate and updated information.</li>
+              <li>• Maintain confidentiality of login credentials.</li>
+              <li>• Use the platform only for lawful purposes.</li>
+              <li>• Not misuse or attempt unauthorized access.</li>
+            </ul>
+          </section>
+
+          {/* 4. Payment Terms */}
+          <section>
+            <h2 className="text-3xl font-semibold mb-6">
+              4. Fees & Payment Terms
+            </h2>
+            <p className="text-muted-foreground">
+              Subscription fees, if applicable, must be paid in accordance with
+              agreed billing cycles. Failure to make timely payments may result
+              in suspension or termination of services.
+            </p>
+
+            <div className="mt-6 p-6 rounded-xl bg-[#694CD0]/10 border border-[#694CD0]/20">
+              <p className="font-medium">
+                Important:
+              </p>
+              <p className="text-muted-foreground mt-2">
+                All payments once processed are non-refundable unless otherwise
+                required under applicable law.
+              </p>
+            </div>
+          </section>
+
+          {/* 5. Data Ownership */}
+          <section>
+            <h2 className="text-3xl font-semibold mb-6">
+              5. Data Ownership & Usage
+            </h2>
+            <p className="text-muted-foreground">
+              All society-related data entered into MyTower remains the property
+              of the respective society or user. MyTower acts as a data processor
+              and does not claim ownership of user data.
+            </p>
+          </section>
+
+          {/* 6. Intellectual Property */}
+          <section>
+            <h2 className="text-3xl font-semibold mb-6">
+              6. Intellectual Property Rights
+            </h2>
+            <p className="text-muted-foreground">
+              The MyTower platform, including software, branding, design,
+              and proprietary features, is protected under intellectual property
+              laws. Unauthorized copying or redistribution is strictly prohibited.
+            </p>
+          </section>
+
+          {/* 7. Limitation of Liability */}
+          <section>
+            <h2 className="text-3xl font-semibold mb-6">
+              7. Limitation of Liability
+            </h2>
+            <p className="text-muted-foreground">
+              To the maximum extent permitted by law, MyTower shall not be
+              liable for indirect, incidental, special, consequential, or
+              punitive damages arising from use of the platform.
+            </p>
+
+            <div className="mt-6 p-6 rounded-xl bg-muted/40 border">
+              <p className="font-medium">
+                Liability Cap:
+              </p>
+              <p className="text-muted-foreground mt-2">
+                Total liability shall not exceed the subscription fees paid
+                by the user in the preceding 12 months.
+              </p>
+            </div>
+          </section>
+
+          {/* 8. Indemnification */}
+          <section>
+            <h2 className="text-3xl font-semibold mb-6">
+              8. Indemnification
+            </h2>
+            <p className="text-muted-foreground">
+              Users agree to indemnify and hold harmless MyTower from claims,
+              liabilities, damages, or expenses arising from misuse of the
+              platform or violation of these terms.
+            </p>
+          </section>
+
+          {/* 9. Termination */}
+          <section>
+            <h2 className="text-3xl font-semibold mb-6">
+              9. Suspension & Termination
+            </h2>
+            <p className="text-muted-foreground">
+              MyTower reserves the right to suspend or terminate accounts
+              that violate these terms, misuse the platform, or fail to make
+              required payments.
+            </p>
+          </section>
+
+          {/* 10. Force Majeure */}
+          <section>
+            <h2 className="text-3xl font-semibold mb-6">
+              10. Force Majeure
+            </h2>
+            <p className="text-muted-foreground">
+              MyTower shall not be liable for delays or failures caused by
+              events beyond reasonable control including natural disasters,
+              government restrictions, cyber incidents, or network failures.
+            </p>
+          </section>
+
+          {/* 11. Governing Law */}
+          <section>
+            <h2 className="text-3xl font-semibold mb-6">
+              11. Governing Law & Jurisdiction
+            </h2>
+            <p className="text-muted-foreground">
+              These Terms shall be governed by and interpreted in accordance
+              with the laws of India. Any disputes shall be subject to the
+              exclusive jurisdiction of courts located in India.
+            </p>
+          </section>
+
+          {/* 12. Amendments */}
+          <section>
+            <h2 className="text-3xl font-semibold mb-6">
+              12. Amendments
+            </h2>
+            <p className="text-muted-foreground">
+              MyTower may update these Terms periodically. Continued use of
+              the platform after modifications constitutes acceptance of
+              revised terms.
+            </p>
+          </section>
+
+          {/* 13. Contact */}
+          <section>
+            <h2 className="text-3xl font-semibold mb-6">
+              13. Contact Information
+            </h2>
+            <div className="border rounded-xl p-6 bg-muted/40">
+              <p><strong>MyTower Legal Department</strong></p>
+              <p>Email: support@mytower.in</p>
+              <p>
+                Website:{" "}
+                <Link href="/" className="text-[#694CD0] hover:underline">
+                  www.mytower.in
+                </Link>
+              </p>
+            </div>
+          </section>
+
         </div>
-
-        {/* 3 */}
-        <div>
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            3. Account Responsibilities
-          </h2>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Maintain confidentiality of login credentials</li>
-            <li>Ensure account information is accurate</li>
-            <li>Notify admin in case of unauthorized access</li>
-          </ul>
-        </div>
-
-        {/* 4 */}
-        <div>
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            4. Scope of Services
-          </h2>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Resident Management</li>
-            <li>Visitor & Security Management</li>
-            <li>Billing & Accounting</li>
-            <li>Facility Booking</li>
-            <li>Complaint System</li>
-            <li>Communication Tools</li>
-          </ul>
-          <p className="mt-4">
-            We reserve the right to modify or upgrade modules at any time.
-          </p>
-        </div>
-
-        {/* 5 */}
-        <div>
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            5. Payments & Subscription
-          </h2>
-          <p>
-            Subscription agreements are executed with residential societies.
-            Residents may use integrated payment gateways for dues.
-            My Tower is not liable for third-party gateway downtime.
-          </p>
-        </div>
-
-        {/* 6 */}
-        <div>
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            6. Acceptable Use
-          </h2>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>No unlawful or abusive use</li>
-            <li>No hacking or reverse engineering</li>
-            <li>No misleading information</li>
-          </ul>
-        </div>
-
-        {/* 7 */}
-        <div>
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            7. Data & Privacy
-          </h2>
-          <p>
-            Use of this platform is governed by our Privacy Policy.
-            Data access permissions are managed by society administrators.
-          </p>
-        </div>
-
-        {/* 8 */}
-        <div>
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            8. Intellectual Property
-          </h2>
-          <p>
-            All software, branding, and design elements belong to My Tower.
-            Unauthorized copying or redistribution is prohibited.
-          </p>
-        </div>
-
-        {/* 9 */}
-        <div>
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            9. Service Availability
-          </h2>
-          <p>
-            We strive for high uptime but do not guarantee uninterrupted service.
-            Maintenance or technical issues may cause temporary disruptions.
-          </p>
-        </div>
-
-        {/* 10 */}
-        <div>
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            10. Limitation of Liability
-          </h2>
-          <p>
-            My Tower shall not be liable for indirect or consequential damages.
-            Internal society disputes remain the responsibility of society management.
-          </p>
-        </div>
-
-        {/* 11 */}
-        <div>
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            11. Termination
-          </h2>
-          <p>
-            Accounts violating these Terms may be suspended.
-            Service access may end upon subscription expiry.
-          </p>
-        </div>
-
-        {/* 12 */}
-        <div>
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            12. Indemnification
-          </h2>
-          <p>
-            Users agree to indemnify My Tower against claims arising from misuse or legal violations.
-          </p>
-        </div>
-
-        {/* 13 */}
-        <div>
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            13. Governing Law
-          </h2>
-          <p>
-            These Terms shall be governed by applicable laws of India.
-            Disputes shall fall under the jurisdiction of competent courts.
-          </p>
-        </div>
-
-        {/* 14 */}
-        <div>
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            14. Amendments
-          </h2>
-          <p>
-            We may update these Terms from time to time.
-            Continued use constitutes acceptance of updated Terms.
-          </p>
-        </div>
-
-        {/* 15 */}
-        <div>
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            15. Contact Information
-          </h2>
-          <p>
-            <strong>My Tower Support Team</strong><br />
-            Email: support@mytower.com<br />
-            Website: www.mytower.com
-          </p>
-        </div>
-
-        {/* AGREEMENT */}
-        <div className="pt-10 border-t">
-          <p className="font-semibold text-foreground">
-            By using My Tower, you acknowledge that you have read and agreed to these Terms & Conditions.
-          </p>
-        </div>
-
-      </section>
-
+      </div>
     </main>
   );
 }

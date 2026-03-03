@@ -1,129 +1,119 @@
 "use client";
 
-import { MapPin, Clock, Briefcase, Users } from "lucide-react";
-import Link from "next/link";
+import { ArrowUpRight, MapPin, Clock } from "lucide-react";
+
+const categories = [
+  "View all",
+  "Development",
+  "Design",
+  "Marketing",
+  "Customer Service",
+  "Operations",
+  "Finance",
+  "Management",
+];
+
+const jobs = [
+  {
+    title: "Product Designer",
+    desc: "We’re looking for a mid-level product designer to join our team.",
+    remote: true,
+    type: "Full-time",
+  },
+  {
+    title: "Engineering Manager",
+    desc: "We’re looking for an experienced engineering manager to join our team.",
+    remote: true,
+    type: "Full-time",
+  },
+  {
+    title: "Customer Success Manager",
+    desc: "We’re looking for a customer success manager to join our team.",
+    remote: true,
+    type: "Full-time",
+  },
+];
 
 export default function CareersPage() {
-  const jobs = [
-    {
-      slug: "frontend-developer",
-      title: "Frontend Developer",
-      department: "Engineering",
-      location: "Lucknow / Remote",
-      experience: "2+ Years",
-      type: "Full Time",
-      description:
-        "Build modern and scalable web applications using React and Next.js.",
-      skills: ["React", "Next.js", "Tailwind"],
-    },
-    {
-      slug: "backend-developer",
-      title: "Backend Developer",
-      department: "Engineering",
-      location: "Lucknow / Remote",
-      experience: "3+ Years",
-      type: "Full Time",
-      description:
-        "Design secure APIs and manage scalable backend infrastructure.",
-      skills: ["Node.js", "MongoDB", "API Design"],
-    },
-    {
-      slug: "fullstack-developer",
-      title: "Full Stack Developer",
-      department: "Engineering",
-      location: "Lucknow / Remote",
-      experience: "3+ Years",
-      type: "Full Time",
-      description:
-        "Work across frontend and backend to deliver complete web solutions.",
-      skills: ["React", "Node", "Database"],
-    },
-  ];
-
   return (
-    <main className="min-h-screen bg-white px-6 py-24">
+    <main className="relative min-h-screen bg-background px-6 pt-32 pb-24 overflow-hidden">
 
-      {/* HERO */}
-<section className="bg-[#694CD0] text-white py-7 px-6 rounded-3xl">
-  <div className="text-center max-w-2xl mx-auto">
-    <h1 className="text-4xl font-semibold tracking-tight">
-      Join Our Team
-    </h1>
-    <p className="mt-4 text-white/80 text-base">
-      Build impactful products with a modern engineering team.
-    </p>
-  </div>
-</section>
+      {/* Soft Background Gradient */}
+      <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-[#694CD0]/20 blur-3xl rounded-full -z-10" />
+      <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-purple-400/10 blur-3xl rounded-full -z-10" />
 
-      {/* JOB LIST */}
-      <section className="mt-16 max-w-5xl mx-auto space-y-8">
+      <div className="max-w-6xl mx-auto">
 
-        {jobs.map((job) => (
-          <div
-            key={job.slug}
-            className="bg-white border border-gray-200 rounded-2xl 
-                       p-8 flex flex-col md:flex-row md:items-start 
-                       justify-between gap-8
-                       shadow-sm hover:shadow-md transition"
-          >
-            {/* LEFT SIDE */}
-            <div className="flex-1">
+        {/* HERO */}
+        <section className="mb-20">
+          <span className="inline-flex items-center px-4 py-2 rounded-full border text-sm font-medium bg-card/60 backdrop-blur-md">
+            We're hiring!
+          </span>
 
-              {/* Title */}
-              <h3 className="text-xl font-semibold text-gray-900">
-                {job.title}
-              </h3>
+          <h1 className="mt-6 text-5xl md:text-6xl font-semibold tracking-tight">
+            Be part of our mission
+          </h1>
 
-              {/* Meta */}
-              <div className="flex flex-wrap items-center gap-5 mt-3 text-sm text-gray-500">
-                <span className="flex items-center gap-1">
-                  <Briefcase size={14}/> {job.department}
-                </span>
-                <span className="flex items-center gap-1">
-                  <MapPin size={14}/> {job.location}
-                </span>
-                <span className="flex items-center gap-1">
-                  <Clock size={14}/> {job.type}
-                </span>
-                <span className="flex items-center gap-1">
-                  <Users size={14}/> {job.experience}
-                </span>
-              </div>
+          <p className="mt-6 text-muted-foreground max-w-2xl text-lg leading-relaxed">
+            We’re looking for passionate people to join MyTower in building
+            the future of smart society management. We value ownership,
+            transparency, and meaningful impact.
+          </p>
+        </section>
 
-              {/* One Line Description */}
-              <p className="mt-4 text-gray-600 text-sm">
-                {job.description}
-              </p>
+        {/* CATEGORY FILTERS */}
+        <section className="flex flex-wrap gap-4 mb-16">
+          {categories.map((cat, i) => (
+            <button
+              key={i}
+              className={`px-5 py-2 rounded-full border text-sm transition-all
+                ${
+                  i === 0
+                    ? "bg-foreground text-background border-foreground"
+                    : "bg-card hover:bg-muted"
+                }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </section>
 
-              {/* Skills */}
-              <div className="flex flex-wrap gap-2 mt-4">
-                {job.skills.map((skill, i) => (
-                  <span
-                    key={i}
-                    className="px-3 py-1 text-xs bg-gray-100 
-                               rounded-md text-gray-700"
-                  >
-                    {skill}
+        {/* JOB LISTINGS */}
+        <section className="divide-y border-t">
+          {jobs.map((job, i) => (
+            <div
+              key={i}
+              className="py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6 group"
+            >
+              <div>
+                <h3 className="text-2xl font-semibold tracking-tight group-hover:text-[#694CD0] transition">
+                  {job.title}
+                </h3>
+                <p className="mt-3 text-muted-foreground max-w-xl">
+                  {job.desc}
+                </p>
+
+                <div className="flex gap-4 mt-5 flex-wrap">
+                  {job.remote && (
+                    <span className="flex items-center gap-2 px-4 py-1.5 rounded-full border text-sm bg-card">
+                      <MapPin className="w-4 h-4" /> 100% remote
+                    </span>
+                  )}
+                  <span className="flex items-center gap-2 px-4 py-1.5 rounded-full border text-sm bg-card">
+                    <Clock className="w-4 h-4" /> {job.type}
                   </span>
-                ))}
+                </div>
               </div>
+
+              {/* Apply */}
+              <button className="flex items-center gap-2 text-lg font-medium hover:text-[#694CD0] transition">
+                Apply <ArrowUpRight className="w-5 h-5" />
+              </button>
             </div>
+          ))}
+        </section>
 
-            {/* RIGHT SIDE BUTTON */}
-            <div className="md:self-start">
-              <Link href={`/careers/${job.slug}`}>
-                <button className="px-6 py-2.5 rounded-lg 
-                                   bg-[#694CD0] text-white text-sm
-                                   hover:bg-[#5a3db0] transition">
-                  Apply Now
-                </button>
-              </Link>
-            </div>
-
-          </div>
-        ))}
-
-      </section>
+      </div>
     </main>
   );
 }

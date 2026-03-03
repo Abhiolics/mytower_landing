@@ -1,264 +1,242 @@
 "use client";
 
-import { useEffect } from "react";
+import Link from "next/link";
 
-export default function PrivacyPolicyPage() {
-
-  useEffect(() => {
-    const links = document.querySelectorAll('a[href^="#"]');
-    links.forEach((link) => {
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute("href")!.substring(1);
-        const element = document.getElementById(targetId);
-        if (element) {
-          const offset = 90;
-          const position =
-            element.getBoundingClientRect().top + window.pageYOffset - offset;
-          window.scrollTo({ top: position, behavior: "smooth" });
-        }
-      });
-    });
-  }, []);
-
+export default function PrivacyPolicy() {
   return (
-    <main className="bg-background text-foreground min-h-screen pt-32 pb-24 px-6 select-none">
+    <main className="min-h-screen bg-background">
+      <div className="max-w-5xl mx-auto px-6 py-24">
 
-      {/* HERO */}
-      <section className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-primary">
-          Privacy Policy
-        </h1>
-        <p className="mt-4 text-muted-foreground">
-          My Tower – Smart Tower Management for Modern Living
-        </p>
-        <p className="text-sm text-muted-foreground mt-2">
-          <strong>Last Updated:</strong> 01/03/26
-        </p>
-        <div className="w-24 h-1 bg-primary mx-auto mt-6 rounded-full" />
-      </section>
-
-      {/* CONTENT */}
-      <section className="max-w-5xl mx-auto space-y-14 text-muted-foreground leading-relaxed">
-
-        {/* Intro */}
-        <div>
-          <p>
-            My Tower (“we,” “our,” or “us”) is committed to protecting the
-            privacy and security of residents, management committees,
-            staff, and all users who access our platform.
-            This Privacy Policy explains how we collect, use, disclose,
-            and safeguard your information when you use our Services.
+        {/* Hero Header */}
+        <header className="text-center mb-20">
+          <h1 className="text-5xl md:text-6xl font-semibold tracking-tight text-[#694CD0]">
+            Privacy Policy
+          </h1>
+          <p className="mt-6 text-lg text-muted-foreground max-w-3xl mx-auto">
+            This Privacy Policy describes how MyTower collects, processes,
+            stores, and protects personal data in connection with its
+            society management platform and related services.
           </p>
-        </div>
-
-        {/* 1 */}
-        <div id="information">
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            1. Information We Collect
-          </h2>
-
-          <h3 className="font-semibold text-foreground mb-2">
-            A. Personal Information
-          </h3>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Full name</li>
-            <li>Email address</li>
-            <li>Phone number</li>
-            <li>Apartment / unit number</li>
-            <li>Profile photo (optional)</li>
-            <li>Role within the society</li>
-          </ul>
-
-          <h3 className="font-semibold text-foreground mt-6 mb-2">
-            B. Visitor & Security Data
-          </h3>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Visitor name and contact number</li>
-            <li>Entry and exit logs</li>
-            <li>Vehicle details</li>
-            <li>Approval records</li>
-          </ul>
-
-          <h3 className="font-semibold text-foreground mt-6 mb-2">
-            C. Billing & Financial Information
-          </h3>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Maintenance invoices</li>
-            <li>Payment history</li>
-            <li>Transaction records</li>
-            <li>Outstanding dues</li>
-          </ul>
-          <p className="mt-2">
-            Payment processing is handled by secure third-party gateways.
-            We do not store sensitive card or banking credentials.
+          <p className="mt-4 text-sm text-muted-foreground">
+            Effective Date: {new Date().toLocaleDateString()}
           </p>
+        </header>
 
-          <h3 className="font-semibold text-foreground mt-6 mb-2">
-            D. Device & Technical Information
-          </h3>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>IP address</li>
-            <li>Device type</li>
-            <li>Browser type</li>
-            <li>Usage logs</li>
-          </ul>
+        <div className="space-y-20 leading-relaxed text-foreground">
+
+          {/* 1. Introduction */}
+          <section>
+            <h2 className="text-3xl font-semibold mb-6">
+              1. Introduction
+            </h2>
+            <p className="text-muted-foreground">
+              MyTower (“Company”, “we”, “our”, “us”) is committed to protecting
+              the privacy and security of residents, administrators, committee
+              members, vendors, and visitors who use our platform.
+              This policy explains how we handle personal data responsibly
+              and transparently.
+            </p>
+
+            <div className="mt-6 p-6 rounded-xl bg-[#694CD0]/10 border border-[#694CD0]/20">
+              <p className="font-medium">
+                Important:
+              </p>
+              <p className="text-muted-foreground mt-2">
+                By accessing or using MyTower, you acknowledge that you have
+                read and understood this Privacy Policy and consent to the
+                practices described herein.
+              </p>
+            </div>
+          </section>
+
+          {/* 2. Information We Collect */}
+          <section>
+            <h2 className="text-3xl font-semibold mb-6">
+              2. Information We Collect
+            </h2>
+
+            <div className="overflow-x-auto border rounded-xl">
+              <table className="w-full text-left border-collapse">
+                <thead className="bg-[#694CD0]/10">
+                  <tr>
+                    <th className="p-4 font-medium">Category</th>
+                    <th className="p-4 font-medium">Examples</th>
+                    <th className="p-4 font-medium">Purpose</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-t">
+                    <td className="p-4">Identity Data</td>
+                    <td className="p-4">Name, Flat Number, Phone, Email</td>
+                    <td className="p-4">User account creation</td>
+                  </tr>
+                  <tr className="border-t">
+                    <td className="p-4">Financial Data</td>
+                    <td className="p-4">Maintenance dues, transaction records</td>
+                    <td className="p-4">Billing & reporting</td>
+                  </tr>
+                  <tr className="border-t">
+                    <td className="p-4">Visitor Data</td>
+                    <td className="p-4">Visitor name, entry logs</td>
+                    <td className="p-4">Security & access control</td>
+                  </tr>
+                  <tr className="border-t">
+                    <td className="p-4">Technical Data</td>
+                    <td className="p-4">IP address, device type</td>
+                    <td className="p-4">Platform security & analytics</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          {/* 3. How We Use Data */}
+          <section>
+            <h2 className="text-3xl font-semibold mb-6">
+              3. How We Use Information
+            </h2>
+            <ul className="space-y-3 text-muted-foreground">
+              <li>• To manage maintenance billing and financial records</li>
+              <li>• To facilitate visitor approvals and entry logs</li>
+              <li>• To resolve complaints and service requests</li>
+              <li>• To send important society announcements</li>
+              <li>• To ensure platform security and fraud prevention</li>
+            </ul>
+          </section>
+
+          {/* 4. Legal Basis */}
+          <section>
+            <h2 className="text-3xl font-semibold mb-6">
+              4. Legal Basis for Processing
+            </h2>
+            <p className="text-muted-foreground">
+              We process personal data based on contractual necessity,
+              legitimate business interests, legal compliance, and user consent,
+              as applicable under relevant data protection laws.
+            </p>
+          </section>
+
+          {/* 5. Data Sharing */}
+          <section>
+            <h2 className="text-3xl font-semibold mb-6">
+              5. Data Sharing & Third Parties
+            </h2>
+
+            <div className="overflow-x-auto border rounded-xl">
+              <table className="w-full text-left border-collapse">
+                <thead className="bg-[#694CD0]/10">
+                  <tr>
+                    <th className="p-4 font-medium">Recipient</th>
+                    <th className="p-4 font-medium">Purpose</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-t">
+                    <td className="p-4">Payment Gateways</td>
+                    <td className="p-4">Secure online payment processing</td>
+                  </tr>
+                  <tr className="border-t">
+                    <td className="p-4">Cloud Hosting Providers</td>
+                    <td className="p-4">Data storage & infrastructure</td>
+                  </tr>
+                  <tr className="border-t">
+                    <td className="p-4">Regulatory Authorities</td>
+                    <td className="p-4">Legal compliance</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div className="mt-6 p-6 rounded-xl bg-muted/40 border">
+              <p className="font-medium">
+                We Do Not Sell Personal Data.
+              </p>
+              <p className="text-muted-foreground mt-2">
+                MyTower does not sell or trade user data to advertisers
+                or external marketing agencies.
+              </p>
+            </div>
+          </section>
+
+          {/* 6. Data Retention */}
+          <section>
+            <h2 className="text-3xl font-semibold mb-6">
+              6. Data Retention
+            </h2>
+            <p className="text-muted-foreground">
+              Personal data is retained only as long as necessary to
+              fulfill contractual obligations, maintain financial records,
+              comply with regulatory requirements, or resolve disputes.
+            </p>
+          </section>
+
+          {/* 7. Security Measures */}
+          <section>
+            <h2 className="text-3xl font-semibold mb-6">
+              7. Security Measures
+            </h2>
+            <p className="text-muted-foreground">
+              We implement encryption, secure servers, role-based access
+              controls, audit logs, and periodic security reviews to protect
+              data against unauthorized access, alteration, or loss.
+            </p>
+
+            <div className="mt-6 p-6 rounded-xl bg-[#694CD0]/10 border border-[#694CD0]/20">
+              <p className="font-medium">
+                Security Commitment:
+              </p>
+              <p className="text-muted-foreground mt-2">
+                While no system is completely immune from risks,
+                MyTower continuously enhances its security infrastructure
+                to meet evolving industry standards.
+              </p>
+            </div>
+          </section>
+
+          {/* 8. User Rights */}
+          <section>
+            <h2 className="text-3xl font-semibold mb-6">
+              8. Your Rights
+            </h2>
+            <p className="text-muted-foreground">
+              Users may request access, correction, or deletion of personal
+              data subject to applicable laws. Requests may be submitted
+              through official contact channels.
+            </p>
+          </section>
+
+          {/* 9. Cookies */}
+          <section>
+            <h2 className="text-3xl font-semibold mb-6">
+              9. Cookies & Tracking
+            </h2>
+            <p className="text-muted-foreground">
+              MyTower may use cookies and similar technologies to enhance
+              platform performance and user experience. Users may disable
+              cookies through browser settings, though certain features may
+              be affected.
+            </p>
+          </section>
+
+          {/* 10. Contact */}
+          <section>
+            <h2 className="text-3xl font-semibold mb-6">
+              10. Contact Information
+            </h2>
+            <div className="border rounded-xl p-6 bg-muted/40">
+              <p><strong>MyTower Support Team</strong></p>
+              <p>Email: support@mytower.in</p>
+              <p>
+                Website:{" "}
+                <Link href="/" className="text-[#694CD0] hover:underline">
+                  www.mytower.in
+                </Link>
+              </p>
+            </div>
+          </section>
+
         </div>
-
-        {/* 2 */}
-        <div>
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            2. How We Use Your Information
-          </h2>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Managing resident and society records</li>
-            <li>Visitor approvals & security logs</li>
-            <li>Automating billing & payment reminders</li>
-            <li>Complaint tracking</li>
-            <li>Facility booking management</li>
-            <li>Sending notifications & announcements</li>
-            <li>Improving platform performance</li>
-          </ul>
-          <p className="mt-4 font-medium text-foreground">
-            We do not sell, rent, or trade your personal information.
-          </p>
-        </div>
-
-        {/* 3 */}
-        <div>
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            3. Data Sharing & Disclosure
-          </h2>
-
-          <h3 className="font-semibold text-foreground mb-2">
-            A. Within Your Society
-          </h3>
-          <p>
-            Data is accessible to authorized committee members and
-            security personnel strictly for operational purposes.
-          </p>
-
-          <h3 className="font-semibold text-foreground mt-6 mb-2">
-            B. Service Providers
-          </h3>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Payment gateway partners</li>
-            <li>Cloud hosting providers</li>
-            <li>SMS / email notification services</li>
-          </ul>
-
-          <h3 className="font-semibold text-foreground mt-6 mb-2">
-            C. Legal Compliance
-          </h3>
-          <p>
-            We may disclose information if required under applicable law
-            or court order.
-          </p>
-        </div>
-
-        {/* 4 */}
-        <div>
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            4. Data Security
-          </h2>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Secure cloud infrastructure</li>
-            <li>Encrypted data transmission (HTTPS)</li>
-            <li>Role-based access control</li>
-            <li>Secure authentication protocols</li>
-          </ul>
-        </div>
-
-        {/* 5 */}
-        <div>
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            5. Data Retention
-          </h2>
-          <p>
-            We retain personal information only as long as necessary for
-            operational, legal, and financial purposes.
-            Data is securely deleted or anonymized when no longer required.
-          </p>
-        </div>
-
-        {/* 6 */}
-        <div>
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            6. User Rights
-          </h2>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Access personal information</li>
-            <li>Correct inaccurate data</li>
-            <li>Request deletion (subject to policy)</li>
-            <li>Withdraw consent for communications</li>
-          </ul>
-        </div>
-
-        {/* 7 */}
-        <div>
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            7. Cookies & Tracking
-          </h2>
-          <p>
-            We may use cookies to improve user experience,
-            maintain login sessions, and analyze performance.
-          </p>
-        </div>
-
-        {/* 8 */}
-        <div>
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            8. Children’s Privacy
-          </h2>
-          <p>
-            We do not knowingly collect personal data from children
-            without proper authorization.
-          </p>
-        </div>
-
-        {/* 9 */}
-        <div>
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            9. Third-Party Links
-          </h2>
-          <p>
-            We are not responsible for privacy practices of third-party services.
-          </p>
-        </div>
-
-        {/* 10 */}
-        <div>
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            10. Policy Updates
-          </h2>
-          <p>
-            We may update this Privacy Policy from time to time.
-            Continued use of the Services constitutes acceptance of changes.
-          </p>
-        </div>
-
-        {/* 11 */}
-        <div>
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            11. Contact Us
-          </h2>
-          <p>
-            <strong>My Tower Support Team</strong><br />
-            Email: support@mytower.com<br />
-            Website: www.mytower.com
-          </p>
-        </div>
-
-        {/* Closing */}
-        <div className="pt-10 border-t">
-          <p className="font-semibold text-foreground">
-            At My Tower, privacy is not just compliance —
-            it is our commitment to secure and transparent residential management.
-          </p>
-        </div>
-
-      </section>
-
+      </div>
     </main>
   );
 }

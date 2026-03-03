@@ -1,62 +1,115 @@
+"use client";
+
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Separator } from "./ui/separator";
 
 export default function Footer() {
-  return (
-    <footer className="border-t py-12 px-6 bg-background">
-      <div className="container mx-auto">
-        <div className="grid md:grid-cols-4 gap-8">
+  const footerLinks = [
+    { label: "Home", href: "#" },
+    { label: "Categories", href: "#" },
+    { label: "Properties", href: "#" },
+    { label: "Featured property", href: "#" },
+    { label: "Testimonials", href: "#" },
+    { label: "Blog", href: "#" },
+    { label: "FAQs", href: "#" },
+    { label: "404 page", href: "#" },
+  ];
 
-          {/* Logo Section */}
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <img
-                src="https://customer-assets.emergentagent.com/job_0c055e08-1f10-4902-90ec-7a6b67332bd2/artifacts/9amdv5ut_image.png"
-                alt="MyTower"
-                className="w-10 h-10 rounded-xl object-contain"
-              />
-              <span className="text-xl font-bold text-[#163268]">
-                MyTower
-              </span>
-            </div>
-            <p className="text-muted-foreground text-sm">
-              Enterprise-grade society management solution for modern residential communities.
+  return (
+    <footer className="relative overflow-hidden bg-gradient-to-b from-background to-muted/40">
+      
+      {/* Background Glow */}
+      <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-[#694CD0]/10 rounded-full blur-3xl -z-10" />
+      <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-purple-400/10 rounded-full blur-3xl -z-10" />
+
+      <div className="max-w-7xl mx-auto px-6 py-24 space-y-20">
+
+        {/* Newsletter Section */}
+        <div className="grid md:grid-cols-12 gap-8 items-center">
+          <div className="md:col-span-4">
+            <p className="text-muted-foreground text-lg">
+              The Operating System for Societies.
             </p>
           </div>
 
-          {/* Product */}
-          <div>
-            <h4 className="font-semibold mb-4">Product</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link href="/features">Features</Link></li>
-              <li><Link href="/modules">Modules</Link></li>
-              <li><Link href="/pricing">Pricing</Link></li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="font-semibold mb-4">Company</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link href="/about">About Us</Link></li>
-              <li><Link href="/contact">Contact</Link></li>
-              <li><Link href="/careers">Careers</Link></li>
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h4 className="font-semibold mb-4">Legal</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link href="/privacy-policy">Privacy Policy</Link></li>
-              <li><Link href="/terms-of-service">Terms of Service</Link></li>
-              <li><Link href="/cookies-policy">Cookies Policy</Link></li>
-            </ul>
+          <div className="md:col-span-8">
+            <div className="flex flex-col lg:flex-row gap-6">
+         
+            </div>
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} MyTower. All rights reserved.
+        <Separator />
+
+        {/* CTA + Links */}
+        <div className="grid md:grid-cols-12 gap-10">
+
+          {/* CTA */}
+          <div className="md:col-span-6 space-y-6">
+            <h2 className="text-3xl sm:text-5xl font-semibold leading-tight">
+              Built for Modern Communities.
+            </h2>
+
+            <Button className="rounded-full px-8 py-6 bg-teal-400 hover:bg-teal-400/80 text-black font-medium">
+              Get in touch
+            </Button>
+          </div>
+
+          {/* Links Column 1 */}
+          <div className="md:col-span-3">
+            <ul className="space-y-4 text-sm">
+              {footerLinks.slice(0, 4).map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="text-muted-foreground hover:text-[#694CD0] transition"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Links Column 2 */}
+          <div className="md:col-span-3">
+            <ul className="space-y-4 text-sm">
+              {footerLinks.slice(4, 8).map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="text-muted-foreground hover:text-[#694CD0] transition"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
         </div>
+
+        <Separator />
+
+        {/* Bottom Bar */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-muted-foreground">
+          <p>©2026 My Tower. All Rights Reserved</p>
+
+          <div className="flex gap-8">
+            <Link href="/privacy-policy" className="hover:text-[#694CD0] transition">
+              Privacy Policy
+            </Link>
+            <Link href="/terms-of-service" className="hover:text-[#694CD0] transition">
+              Terms & Condition
+            </Link>
+            <Link href="/contact" className="hover:text-[#694CD0] transition">
+              Support
+            </Link>
+          </div>
+        </div>
+
       </div>
     </footer>
   );
