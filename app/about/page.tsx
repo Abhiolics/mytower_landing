@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-
+import Navbar from "@/components/Navbar";
 export default function AboutUs() {
   const router = useRouter();
   const fadeUpDelay = (idx: number) => `${idx * 0.15}s`;
@@ -26,7 +26,7 @@ export default function AboutUs() {
 
   return (
    <main className="bg-background text-foreground min-h-screen pt-32 pb-24 px-6 overflow-x-hidden">
-
+<Navbar/>
   {/* HERO */}
   <section className="relative text-center mb-24">
     <div className="absolute inset-0 -z-10 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />

@@ -130,7 +130,7 @@ const Navbar: React.FC<NavbarProps> = ({ navData }) => {
         <SheetContent
           side="right"
           showCloseButton={false}
-          className="bg-background p-6 overflow-auto no-scrollbar border-none flex flex-col gap-12"
+          className="bg-background p-6 overflow-auto no-scrollbar border-none flex flex-col gap-12 [&>button]:hidden"
         >
           {/* Header / Close Button */}
           <SheetHeader>

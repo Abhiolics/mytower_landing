@@ -1,10 +1,12 @@
 "use client";
-
+import Navbar from "@/components/Navbar";
 import Link from "next/link";
 
 export default function PrivacyPolicy() {
   return (
     <main className="min-h-screen bg-background">
+      <Navbar />
+
       <div className="max-w-5xl mx-auto px-6 py-24">
 
         {/* Hero Header */}

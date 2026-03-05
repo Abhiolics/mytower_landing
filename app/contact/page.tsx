@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react";
 import { CheckCircle2, Mail, Phone, MapPin } from "lucide-react";
-
+import Navbar from "@/components/Navbar";
 export default function ContactPage() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -22,7 +22,7 @@ export default function ContactPage() {
 
   return (
     <main className="min-h-screen bg-background text-foreground">
-
+<Navbar/>
       {/* HERO */}
       <section className="pt-36 pb-20 px-6 text-center relative">
         <div className="absolute inset-0 bg-gradient-to-b from-[#694CD0]/5 to-transparent -z-10" />
