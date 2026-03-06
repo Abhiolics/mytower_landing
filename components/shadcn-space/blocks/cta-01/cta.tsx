@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
-
+import Navbar from "@/components/Navbar";
 type CTAProps = {
   className?: string;
 };
@@ -19,6 +19,7 @@ const CTA = ({ className }: CTAProps) => {
 
   return (
     <section>
+      <Navbar />
       <div className="sm:py-20 py-8">
         <div className="max-w-7xl mx-auto sm:px-16 px-4">
           <div

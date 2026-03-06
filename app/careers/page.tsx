@@ -1,7 +1,7 @@
 "use client";
-
+import Link from "next/link";
 import { ArrowUpRight, MapPin, Clock } from "lucide-react";
-
+import Navbar from "@/components/Navbar";
 const categories = [
   "View all",
   "Development",
@@ -16,18 +16,21 @@ const categories = [
 const jobs = [
   {
     title: "Product Designer",
+    slug: "product-designer", 
     desc: "We’re looking for a mid-level product designer to join our team.",
     remote: true,
     type: "Full-time",
   },
   {
     title: "Engineering Manager",
+    slug: "engineering-manager", 
     desc: "We’re looking for an experienced engineering manager to join our team.",
     remote: true,
     type: "Full-time",
   },
   {
     title: "Customer Success Manager",
+    slug: "customer-success-manager",
     desc: "We’re looking for a customer success manager to join our team.",
     remote: true,
     type: "Full-time",
@@ -37,7 +40,7 @@ const jobs = [
 export default function CareersPage() {
   return (
     <main className="relative min-h-screen bg-background px-6 pt-32 pb-24 overflow-hidden">
-
+      <Navbar />
       {/* Soft Background Gradient */}
       <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-[#694CD0]/20 blur-3xl rounded-full -z-10" />
       <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-purple-400/10 blur-3xl rounded-full -z-10" />
@@ -106,9 +109,12 @@ export default function CareersPage() {
               </div>
 
               {/* Apply */}
-              <button className="flex items-center gap-2 text-lg font-medium hover:text-[#694CD0] transition">
-                Apply <ArrowUpRight className="w-5 h-5" />
-              </button>
+             <Link
+  href={`/careers/${job.slug}`}   // ✅ YE IMPORTANT
+  className="flex items-center gap-2 text-lg font-medium hover:text-[#694CD0] transition"
+>
+  Apply <ArrowUpRight className="w-5 h-5" />
+</Link>
             </div>
           ))}
         </section>

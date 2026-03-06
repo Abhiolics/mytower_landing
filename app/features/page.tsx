@@ -1,9 +1,9 @@
 "use client";
-
+import Navbar from "@/components/Navbar";
 export default function FeaturesPage() {
   return (
     <main className="bg-background text-foreground min-h-screen pt-32 pb-24 px-6">
-
+<Navbar/>
       <section className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-primary">
           Platform Features

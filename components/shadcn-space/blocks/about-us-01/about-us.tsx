@@ -61,7 +61,7 @@ const AboutUs = ({
 
   return (
     <section className="lg:py-20 sm:py-16 py-8">
-     
+      <Navbar />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-16">
         <div className="flex flex-col items-center justify-center gap-8 md:gap-16">
           <motion.div

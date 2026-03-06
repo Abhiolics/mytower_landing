@@ -7,15 +7,15 @@ import { Separator } from "./ui/separator";
 
 export default function Footer() {
   const footerLinks = [
-    { label: "Home", href: "#" },
-    { label: "Categories", href: "#" },
-    { label: "Properties", href: "#" },
-    { label: "Featured property", href: "#" },
-    { label: "Testimonials", href: "#" },
-    { label: "Blog", href: "#" },
-    { label: "FAQs", href: "#" },
-    { label: "404 page", href: "#" },
-  ];
+   { label: "Home", href: "/" },
+  { label: "Categories", href: "/features" },
+  { label: "Properties", href: "/feature-01" },
+  { label: "Featured property", href: "/cta-01" },
+  { label: "Testimonials", href: "/about-us-01" },
+  { label: "Blog", href: "/careers" },
+  { label: "FAQs", href: "/faq-01" },
+  { label: "Careers", href: "/careers" },
+];
 
   return (
     <footer className="relative overflow-hidden bg-gradient-to-b from-background to-muted/40">

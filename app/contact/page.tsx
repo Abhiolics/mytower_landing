@@ -100,11 +100,14 @@ export default function ContactPage() {
               Send Us a Message
             </h3>
 
-            <Input placeholder="Full Name" required  className="border border-b"/>
-            <Input type="email" placeholder="Email Address" required />
-            <Input placeholder="Mobile Number" required />
+           <Input placeholder="Full Name" required />
+<Input type="email" placeholder="Email Address" required />
+<Input placeholder="Mobile Number" required />
 
-            <select required className="inputStyle w-full">
+            <select
+  required
+  className="w-full border border-gray-300 rounded-xl px-4 py-3 outline-none focus:border-[#694CD0]"
+>
               <option value="">Select Inquiry Type</option>
               <option>Request Demo</option>
               <option>Pricing Details</option>
@@ -113,12 +116,12 @@ export default function ContactPage() {
               <option>General Query</option>
             </select>
 
-            <textarea
-              required
-              rows={4}
-              placeholder="Tell us about your requirement..."
-              className="inputStyle w-full"
-            />
+           <textarea
+  required
+  rows={4}
+  placeholder="Tell us about your requirement..."
+  className="w-full border border-gray-300 rounded-xl px-4 py-3 outline-none focus:border-[#694CD0]"
+/>
 
             <button
               type="submit"
@@ -156,11 +159,11 @@ export default function ContactPage() {
 }
 
 /* Reusable Input */
-function Input(props: React.InputHTMLAttributes<HTMLInputElement>) {
+function Input({ className = "", ...props }: React.InputHTMLAttributes<HTMLInputElement>) {
   return (
     <input
       {...props}
-      className="inputStyle w-full"
+      className={`w-full border border-gray-300 rounded-xl px-4 py-3 outline-none focus:border-[#694CD0] ${className}`}
     />
   );
 }

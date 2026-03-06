@@ -1,10 +1,11 @@
+
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { LucideIcon } from "lucide-react";
 import { motion } from "motion/react";
-
+import Navbar from "@/components/Navbar";
 type Features = {
   icon: LucideIcon;
   content: string;
@@ -12,7 +13,9 @@ type Features = {
 
 const Feature = ({ featureData }: { featureData: Features }) => {
   return (
-    <section>
+    
+    <section>\
+      <Navbar />
       <div className="lg:py-20 sm:py-16 py-8 ">
         <div className="mx-auto max-w-7xl px-4 sm:px-8">
           <div className="flex flex-col gap-8 md:gap-12">

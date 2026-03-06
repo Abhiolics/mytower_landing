@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Plus } from "lucide-react";
-
+import Navbar from "@/components/Navbar";
 const FAQ_DATA = [
   {
     question: "What does MyTower help manage?",
@@ -50,6 +50,7 @@ export default function FAQ() {
 
   return (
     <section className="py-20">
+      <Navbar />
       <div className="max-w-4xl mx-auto px-6">
 
         {/* Heading */}

@@ -23,165 +23,137 @@ const [submitted, setSubmitted] = useState(false);
 };
 
   // Dynamic Job Data
-  const jobData: any = {
-    "frontend-developer": {
-      title: "Frontend Developer",
-      department: "Engineering",
-      location: "Lucknow / Remote",
-      type: "Full Time",
-      experience: "2+ Years",
-    about: `
-We are a product-focused technology company building scalable, high-performance digital platforms used by modern businesses. Our engineering team is driven by clean architecture principles, performance optimization, and exceptional user experience.
+ const jobData: any = {
+  "product-designer": {
+    title: "Product Designer",
+    department: "Design",
+    location: "Lucknow / Remote",
+    type: "Full Time",
+    experience: "2+ Years",
+about: `
+We are a product-driven company focused on building intuitive and modern digital experiences. Our design team plays a crucial role in shaping how users interact with our platform.
 
-We believe that frontend development is not just about building interfaces — it is about crafting seamless digital experiences that are fast, intuitive, and reliable. Our culture encourages ownership, technical excellence, and continuous learning. Every engineer contributes to improving product quality, performance, and scalability.
+We believe great design is not just about visuals but about solving real problems for users. Designers at our company collaborate closely with engineers and product teams to create simple, elegant, and functional user experiences.
 
-As part of our frontend team, you will work on modern web applications that directly impact user engagement and overall product success.
+As a Product Designer, you will help craft user-centered solutions that make our platform easy to use, visually engaging, and highly efficient.
 `,
 
 role: `
-As a Frontend Developer, you will design, develop, and maintain responsive and high-performance user interfaces. You will collaborate closely with backend engineers, designers, and product managers to translate business requirements into elegant technical solutions.
+As a Product Designer, you will be responsible for designing user-friendly interfaces and improving the overall user experience of our platform.
 
-Your role will involve building reusable UI components, integrating APIs, optimizing performance, ensuring cross-browser compatibility, and maintaining code quality standards. You will take ownership of frontend modules from design to deployment while continuously improving user experience.
+You will collaborate with product managers, engineers, and stakeholders to transform ideas into wireframes, prototypes, and final designs. Your work will ensure our product remains intuitive, modern, and visually appealing.
 `,
 
 responsibilities: [
-  "Develop scalable and maintainable UI components using React.js and Next.js",
-  "Implement responsive layouts ensuring cross-browser compatibility",
-  "Integrate and consume RESTful APIs efficiently",
-  "Optimize frontend performance for speed and accessibility",
-  "Collaborate with designers to implement pixel-perfect UI/UX",
-  "Maintain code quality through best practices and documentation",
-  "Participate in code reviews and technical discussions",
-  "Continuously improve frontend architecture and user experience",
+  "Design intuitive user interfaces for web applications",
+  "Create wireframes, prototypes, and design systems",
+  "Collaborate with product managers and developers",
+  "Conduct user research and usability testing",
+  "Ensure consistent design standards across the platform",
+  "Improve product usability and visual experience",
 ],
 
 requirements: [
-  "Strong proficiency in React.js and Next.js",
-  "Solid understanding of modern JavaScript (ES6+) and TypeScript",
-  "Experience with Tailwind CSS or modern CSS frameworks",
-  "Understanding of REST APIs and frontend-backend integration",
-  "Knowledge of performance optimization techniques",
-  "Familiarity with version control systems (Git)",
-  "Strong debugging and problem-solving skills",
-  "Ability to work independently and take ownership of features",
+  "Strong experience with Figma or modern design tools",
+  "Good understanding of UI/UX principles",
+  "Ability to design responsive and modern interfaces",
+  "Strong communication and collaboration skills",
+  "Portfolio showcasing product or UI design work",
 ],
 
 benefits: [
-  "Competitive compensation and performance incentives",
-  "Flexible work environment (Remote/Hybrid)",
-  "Learning and development budget",
-  "Exposure to scalable real-world product systems",
-  "Collaborative and innovation-driven engineering culture",
-  "Clear growth path and leadership opportunities",
+  "Competitive salary and incentives",
+  "Remote-friendly work environment",
+  "Learning and growth opportunities",
+  "Creative and collaborative design culture",
 ],
-    },
+  },
 
-    "backend-developer": {
-      title: "Backend Developer",
-      department: "Engineering",
-      location: "Lucknow / Remote",
-      type: "Full Time",
-      experience: "3+ Years",
-      about: `
-We are a product-driven technology company building scalable, secure, and high-performance digital platforms. Our systems power mission-critical applications that demand reliability, speed, and precision.
+  "engineering-manager": {
+    title: "Engineering Manager",
+    department: "Engineering",
+    location: "Lucknow / Remote",
+    type: "Full Time",
+    experience: "5+ Years",
+about: `
+Our engineering team builds scalable technology platforms that power modern digital communities. We focus on building reliable, secure, and high-performance systems.
 
-Our engineering culture is built around ownership, clean architecture, performance optimization, and long-term scalability. We emphasize writing maintainable code, designing resilient systems, and building infrastructure that can scale with business growth.
+We are looking for an experienced Engineering Manager who can lead a team of developers and guide them toward delivering high-quality products.
 
-We operate with a strong product mindset — every backend decision directly impacts user experience, system reliability, and business outcomes. If you enjoy solving complex engineering problems and building systems that scale, you will thrive here.
+Our culture encourages leadership, ownership, and continuous improvement across the engineering organization.
 `,
 
 role: `
-As a Backend Developer, you will design and build scalable APIs, manage databases, and develop core backend services that power our applications.
+As an Engineering Manager, you will lead and mentor a team of engineers while ensuring the successful delivery of product features.
 
-You will collaborate with frontend engineers, product managers, and DevOps teams to ensure seamless integration and system performance. Your responsibilities will include architecting backend modules, improving system efficiency, implementing security best practices, and ensuring high availability.
-
-You will take full ownership of backend features from design to deployment while maintaining high code quality standards and documentation practices.
+You will collaborate with product managers and designers to plan development cycles, guide system architecture decisions, and maintain engineering standards.
 `,
 
 responsibilities: [
-  "Design and develop scalable RESTful APIs and backend services",
-  "Architect and optimize database schemas and queries",
-  "Implement authentication and authorization mechanisms (JWT, OAuth)",
-  "Ensure application security, data protection, and compliance standards",
-  "Monitor system performance and optimize server-side logic",
-  "Collaborate with frontend and DevOps teams for seamless deployment",
-  "Write clean, testable, and maintainable production-level code",
-  "Participate in code reviews and contribute to technical decisions",
+  "Lead and mentor engineering teams",
+  "Oversee development planning and project execution",
+  "Define technical architecture and engineering standards",
+  "Improve team productivity and development processes",
+  "Ensure product quality, scalability, and performance",
 ],
 
 requirements: [
-  "Strong proficiency in Node.js and Express.js",
-  "Experience with MongoDB or PostgreSQL and database optimization",
-  "Solid understanding of REST architecture and API best practices",
-  "Knowledge of authentication systems and security fundamentals",
-  "Experience with cloud platforms (AWS, GCP, or similar)",
-  "Understanding of system design, scalability, and microservices concepts",
-  "Strong debugging and problem-solving skills",
-  "Ability to work independently and take ownership of modules",
+  "Strong experience in software engineering",
+  "Leadership experience managing engineering teams",
+  "Knowledge of modern backend and frontend technologies",
+  "Strong problem solving and decision making skills",
+  "Excellent communication and leadership abilities",
 ],
 
 benefits: [
+  "Leadership growth opportunities",
+  "Flexible work environment",
   "Competitive compensation package",
-  "Flexible work environment (Remote/Hybrid)",
-  "Performance-based bonuses and incentives",
-  "Learning and development budget",
-  "Opportunity to work on scalable real-world systems",
-  "Collaborative and growth-driven engineering culture",
+  "Exposure to large scale engineering systems",
 ],
-    },
+  },
 
-    "fullstack-developer": {
-      title: "Full Stack Developer",
-      department: "Engineering",
-      location: "Lucknow / Remote",
-      type: "Full Time",
-      experience: "3+ Years",
-     about: `
-We are a fast-growing product-focused technology company building scalable digital platforms used by modern businesses. Our engineering team works on end-to-end systems that combine intuitive frontend experiences with powerful backend architecture.
+  "customer-success-manager": {
+    title: "Customer Success Manager",
+    department: "Customer Success",
+    location: "Lucknow / Remote",
+    type: "Full Time",
+    experience: "3+ Years",
+about: `
+Our Customer Success team ensures that customers achieve maximum value from our platform. We focus on building long-term relationships and ensuring a smooth experience for our users.
 
-We believe in writing clean, maintainable code and building systems that are scalable, secure, and performance-driven. Our culture encourages ownership, technical excellence, and continuous improvement. Every engineer contributes not just to features, but to long-term product architecture and engineering standards.
-
-As a Full Stack Developer, you will work across the complete technology stack and directly impact how our products are built, scaled, and optimized.
+Customer Success Managers act as the bridge between our company and our customers, ensuring satisfaction, retention, and continuous engagement with our platform.
 `,
 
 role: `
-As a Full Stack Developer, you will be responsible for designing and implementing both frontend and backend components of our applications. You will work closely with product managers, designers, and other engineers to deliver high-quality features from concept to deployment.
+As a Customer Success Manager, you will work directly with customers to understand their needs, help them onboard successfully, and ensure they achieve their goals using our platform.
 
-Your role will involve building user-facing interfaces, developing scalable APIs, managing databases, and ensuring seamless integration between systems. You will take ownership of modules, optimize performance, and maintain high standards of code quality across the stack.
+You will also collaborate with internal teams to improve the customer experience and resolve issues quickly.
 `,
 
 responsibilities: [
-  "Develop and maintain scalable frontend applications using React/Next.js",
-  "Design and implement secure backend APIs using Node.js",
-  "Architect and manage database schemas and data models",
-  "Ensure seamless integration between frontend and backend systems",
-  "Optimize applications for speed, performance, and scalability",
-  "Collaborate with cross-functional teams to define and ship new features",
-  "Write reusable, maintainable, and well-documented code",
-  "Participate in code reviews and contribute to technical architecture decisions",
+  "Manage onboarding and support for new customers",
+  "Build strong relationships with clients",
+  "Ensure customer satisfaction and retention",
+  "Resolve customer issues and provide guidance",
+  "Gather feedback to improve product experience",
 ],
 
 requirements: [
-  "Strong proficiency in React.js and modern JavaScript frameworks",
-  "Solid experience with Node.js and backend development",
-  "Experience with MongoDB or PostgreSQL",
-  "Understanding of RESTful APIs and system architecture",
-  "Knowledge of authentication, authorization, and security best practices",
-  "Basic understanding of cloud deployment and CI/CD pipelines",
-  "Strong problem-solving and debugging skills",
-  "Ability to work independently and manage complete features end-to-end",
+  "Strong communication and interpersonal skills",
+  "Experience in customer success or account management",
+  "Ability to solve problems quickly and efficiently",
+  "Customer-focused mindset",
 ],
 
 benefits: [
-  "Competitive salary and performance incentives",
-  "Flexible work hours and remote-friendly culture",
-  "Learning and certification support",
-  "Exposure to scalable real-world systems",
-  "Fast-growth environment with leadership opportunities",
-  "Collaborative and innovation-driven engineering culture",
+  "Performance based incentives",
+  "Flexible work environment",
+  "Career growth opportunities",
+  "Supportive and collaborative culture",
 ],
-    },
-  };
+  },
+};
 
   const job = jobData[slug as string];
 
