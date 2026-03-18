@@ -1,0 +1,7 @@
+1:"$Sreact.fragment"
+2:I[14722,["/main/_next/static/chunks/ba12477991187544.js","/main/_next/static/chunks/bcec30813899f472.js","/main/_next/static/chunks/f990238e4cdbbc23.js","/main/_next/static/chunks/d468472cd271b550.js","/main/_next/static/chunks/b604ad0b6a20199d.js"],"default"]
+3:I[49369,["/main/_next/static/chunks/ba12477991187544.js","/main/_next/static/chunks/bcec30813899f472.js","/main/_next/static/chunks/f990238e4cdbbc23.js","/main/_next/static/chunks/d468472cd271b550.js","/main/_next/static/chunks/b604ad0b6a20199d.js"],"default"]
+4:I[97367,["/main/_next/static/chunks/ff1a16fafef87110.js","/main/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
+5:"$Sreact.suspense"
+0:{"buildId":"9TOdz_t0kGluINIeIJ55L","rsc":["$","$1","c",{"children":[[["$","$L2",null,{"navData":[{"name":"Home","href":"#","isActive":true},{"name":"Properties","href":"#","isActive":false},{"name":"Blog","href":"#","isActive":false},{"name":"Contact","href":"#","isActive":false},{"name":"Docs","href":"#","isActive":false}]}],["$","main",null,{"className":"-mt-20","children":["$","$L3",null,{}]}]],[["$","script","script-0",{"src":"/main/_next/static/chunks/f990238e4cdbbc23.js","async":true}],["$","script","script-1",{"src":"/main/_next/static/chunks/d468472cd271b550.js","async":true}],["$","script","script-2",{"src":"/main/_next/static/chunks/b604ad0b6a20199d.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"loading":null,"isPartial":false}
+6:null

@@ -1,0 +1,5 @@
+:HL["/main/_next/static/chunks/d2d91a53cc93e0b6.css","style"]
+:HL["/main/_next/static/media/7ebf22b5a21034f8-s.p.d8bad3ab.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/main/_next/static/chunks/1a6621e15694a9a3.css","style"]
+:HL["https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&display=swap","style"]
+0:{"buildId":"9TOdz_t0kGluINIeIJ55L","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"about-us-01","paramType":null,"paramKey":"about-us-01","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

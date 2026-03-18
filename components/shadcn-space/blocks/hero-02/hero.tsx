@@ -71,7 +71,7 @@ const HeroSection: React.FC = () => {
     {/* Image - Medium Proper Size */}
     <div className="xl:absolute bottom-24 right-0 z-0 hidden md:block">
       <img
-        src="/hero.png"
+        src="/main/hero.png"
         alt="Modern Residential Building"
         className="w-[520px] lg:w-[620px] xl:w-[700px] h-auto object-contain drop-shadow-2xl"
       />
